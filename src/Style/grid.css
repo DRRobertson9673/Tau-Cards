@@ -1,0 +1,169 @@
+#operativesGrid {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    padding: 1vw;
+}
+
+.operativeCard {
+    position: relative;
+    background-color: black;
+    border: solid .2vw var(--myOrange);
+}
+
+.nameNwounds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 10.5vw;
+}
+
+h1 {
+    position: relative;
+    left: -0.75vw;
+    padding-top: 1vw;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    height: .5vw;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 0.2vw;
+    color: black;
+}
+
+.operativeImageHolder {
+    position: relative;
+    top: -0.5vw;
+    left: -0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12vw;
+    min-width: 12vw;
+    height: 10.5vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: var(--myOrange);
+    border-top: solid .15vw var(--myOrange);
+}
+
+.imageName {
+    display: flex;
+    height: 5vw;
+}
+
+.operativeImage {
+    width: 11.5vw;
+    height: 10vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.woundsBar {
+    background-color: var(--myLightGrey);
+    width: 100%;
+    height: 4.5vw;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--myOrange);
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+
+.statName {
+    width: 3vw;
+    color: black;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.statValues {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+
+.statValue {
+    width: 3vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.circle {
+    height: 1.2vw;
+    width: 1.2vw;
+    background: white;
+    border-radius: 100px;
+    margin-left: .15vw;
+}
+
+.movement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weaponsList div:nth-child(odd) {
+    background-color: var(--myDarkGrey);
+}
+.weaponsList div:nth-child(even) {
+    background-color: var(--myDarkestGrey);
+}
+
+.weapons {
+    width: 100%;
+    height: 2vw;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+.weaponName {
+    background-color: rgb(0,0,0,0) !important;
+    font-family: oswald;
+    color: black;
+    font-size: 1.1vw;;
+    line-height: 1.5vw;
+}
+
+.attackIcon {
+    position: relative;
+    top: 0.16vw;
+    height: 1.25vw;
+    margin-right: 0.2vw;
+    filter: brightness(0);
+}
+
+.notesArea {
+    padding-top: 0.3vw;;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.notesArea p {
+    font-family: oswald;
+    font-weight: 300;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+}
+
+.notesArea p b{
+    font-family: oswald;
+    font-weight: 500;
+}
