@@ -400,23 +400,26 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id
 
         setTimeout(() => $('.operativeCard').removeClass("invisible"), 250);
         setTimeout(() => $('.operativeCard').removeClass("hidden"), 125);
-        
+
         $('.operativeCardLarge').addClass("invisible");
         setTimeout(() => $('.operativeCardLarge').addClass("hidden"), 125);
     };
 
     return <div id={id} className="operativeCardLarge hidden invisible" onClick={handleClickLarge}>
-        <div className="imageName">
-            <div className="operativeImageHolder">
-                <img className="operativeImage" src={image} alt="" />
-            </div>
-            <div className="nameNwounds">
-                <h1>{name}</h1>
-                <h2>{wounds}</h2>
+        <div className="largeCardSections">
+            <div className="nameSection">{name}</div>
+            <div className="imageSection"><img className="operativeImageLarge" src={image} alt="" /></div>
+            <div className="statsSection">
+                <div className="statsLarge">
+                    <div className="statName">M</div>
+                    <div className="statName">APL</div>
+                    <div className="statName">GA</div>
+                    <div className="statName">DF</div>
+                    <div className="statName">SV</div>
+                </div>
             </div>
         </div>
-        <div className="woundsBar">
-        </div>
+
         <div className="stats">
             <div className="statName">M</div>
             <div className="statName">APL</div>
@@ -451,7 +454,7 @@ function Grid() {
                 {operativesArray.map((card) => (
                     <Card id={card.id} name={card.operativeName} type={card.type} image={card.image} wounds={card.W} M={card.M} APL={card.APL} GA={card.GA} DF={card.DF} SV={card.SV} Weapons={card.Weapons} Notes={card.Notes} />
                 ))}
-                                {operativesArray.map((cardLarge) => (
+                {operativesArray.map((cardLarge) => (
                     <CardLarge id={cardLarge.id} name={cardLarge.operativeName} type={cardLarge.type} image={cardLarge.image} wounds={cardLarge.W} M={cardLarge.M} APL={cardLarge.APL} GA={cardLarge.GA} DF={cardLarge.DF} SV={cardLarge.SV} Weapons={cardLarge.Weapons} Notes={cardLarge.Notes} />
                 ))}
             </div>
