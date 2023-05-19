@@ -1,12 +1,21 @@
 import "../Style/grid.css"
-import operativeOne from '../images/TauGuy.jpeg';
+import Blooded from '../images/Blooded.jpg';
+import Comms from '../images/Comms.jpg';
+import DroneGuy from '../images/DroneGuy.jpg';
+import Grenadier from '../images/Grenadier.jpg';
+import Marksman from '../images/Marksman.jpg';
+import ReconDrone from '../images/ReconDrone.jpg';
+import Shas from '../images/Shas.jpg';
+import ShieldDrone from '../images/ShieldDrone.jpg';
+import TIP from '../images/TIP.jpg';
+import WeaponsEx from '../images/WeaponsEx.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
 
 const operativesArray = [
     {
         id: 8,
-        image: operativeOne,
+        image: Shas,
         operativeName: "SHAS'UI",
         type: "Marksman, Scout",
         M: 3,
@@ -37,7 +46,7 @@ const operativesArray = [
     },
     {
         id: 1,
-        image: operativeOne,
+        image: Grenadier,
         operativeName: "ASSAULT GRENADIER",
         type: "Staunch, Scout",
         M: 3,
@@ -82,7 +91,7 @@ const operativesArray = [
     },
     {
         id: 2,
-        image: operativeOne,
+        image: Blooded,
         operativeName: "BLOODED",
         type: "Type 1",
         M: 3,
@@ -113,7 +122,7 @@ const operativesArray = [
     },
     {
         id: 3,
-        image: operativeOne,
+        image: Comms,
         operativeName: "COMMS SPECIALIST",
         type: "Type 1",
         M: 3,
@@ -144,7 +153,7 @@ const operativesArray = [
     },
     {
         id: 4,
-        image: operativeOne,
+        image: DroneGuy,
         operativeName: "DRONE CONTROLLER",
         type: "Type 1",
         M: 3,
@@ -176,7 +185,7 @@ const operativesArray = [
 
     {
         id: 6,
-        image: operativeOne,
+        image: ReconDrone,
         operativeName: "RECON DRONE",
         type: "Type 1",
         M: 3,
@@ -207,7 +216,7 @@ const operativesArray = [
     },
     {
         id: 7,
-        image: operativeOne,
+        image: ShieldDrone,
         operativeName: "SHIELD DRONE",
         type: "Type 1",
         M: 3,
@@ -232,7 +241,7 @@ const operativesArray = [
 
     {
         id: 9,
-        image: operativeOne,
+        image: TIP,
         operativeName: "TIP",
         type: "Type 1",
         M: 3,
@@ -263,7 +272,7 @@ const operativesArray = [
     },
     {
         id: 5,
-        image: operativeOne,
+        image: Marksman,
         operativeName: "MARKSMAN",
         type: "Type 1",
         M: 3,
@@ -301,7 +310,7 @@ const operativesArray = [
     },
     {
         id: 10,
-        image: operativeOne,
+        image: WeaponsEx,
         operativeName: "WEAPONS EXPERT A",
         type: "Type 1",
         M: 3,
