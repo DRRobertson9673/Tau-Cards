@@ -4,7 +4,8 @@
   --myOrange: rgb(233, 81, 8);
   --myLightGrey: rgb(221, 225, 224);
   --myDarkGrey: rgb(198, 198, 198);
-  --myDarkestGrey: rgb(157, 157, 157);
+  --myDarkestGrey: rgb(170, 170, 170);
+  --myTitleGrey: rgb(139, 141, 140);
 }
 
 * {
@@ -17,4 +18,5 @@
 
 body {
   background-color: black;
+  -webkit-font-smoothing: subpixel-antialiased;
 }

@@ -113,6 +113,7 @@ h2 {
     background: white;
     border-radius: 100px;
     margin-left: .15vw;
+    outline: solid 1.5px black;
 }
 
 .movement {
@@ -192,6 +193,7 @@ h2 {
     position: relative;
     border: solid .3vw var(--myOrange);
     transition: opacity 0.125s;
+    padding: 10px;
 }
 
 .imageNameLarge {
@@ -200,32 +202,32 @@ h2 {
 }
 
 .operativeImageLarge {
-    width: 16.75vw;
-    height: 14.6vw;
+    width: 17vw;
+    height: 14.9vw;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 .largeCardSections {
     display: flex;
-    height: 13.75vw;
+    height: 13vw;
     width: 100%;
     background-color: var(--myLightGrey);
     border-bottom: solid .3vw var(--myOrange);
 }
 
 .nameSection {
-width: 60%;
-height: 100%;
-background-color: rgb(33, 33, 33);
-padding-left: 2vw;
-padding-top: 1vw;
-font-size: 4vw;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-size: 4vw;
 }
 
 .imageSection {
-    position: relative;
+    position: absolute;
     top: -1vw;
-    left: -9vw;
+    left: 44.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,9 +236,194 @@ font-size: 4vw;
     height: 15.75vw;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     background-color: var(--myOrange);
-    border-top: solid .35vw var(--myOrange);
+    border-top: solid .3vw var(--myOrange);
+}
+
+.statsSection {
+    width: 40%;
 }
 
 .statsLarge {
+    padding-left: 7vw;
     display: flex;
+    justify-content: space-around;
+    background-color: azure;
+}
+
+.statNameLarge {
+    width: 3vw;
+    color: black;
+    font-size: 2.085vw;
+    text-align: center;
+}
+
+.orange {
+    background-color: var(--myOrange);
+}
+
+.headerBar {
+    display: flex;
+    width: 100%;
+    height: 3vw;
+    margin-top: 0.75vw;
+    background-color: var(--myTitleGrey);
+    font-size: 1.9vw;
+    padding-left: 1vw;
+}
+
+.headerWeapon {
+    width: 35%;
+    color: black;
+    ;
+}
+
+.headerSkill {
+    width: 20%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerD {
+    width: 20%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerSR {
+    width: 20%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerCrit {
+    width: 20%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.weaponsLarge {
+    display: flex;
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-top: .2vw;
+}
+
+.attackIconLarge {
+    position: relative;
+    top: 0.16vw;
+    height: 1.5vw;
+    margin-right: 0.2vw;
+    filter: brightness(0);
+}
+
+.weaponNameLarge {
+    background-color: rgb(0, 0, 0, 0) !important;
+    font-family: oswald;
+    color: black;
+    font-size: 1.4vw;
+    line-height: 2vw;
+}
+
+.oswald {
+    font-family: oswald;
+    font-weight: 600;
+    font-size: 1.25vw;
+}
+
+.abilitiesUniqueActions {
+    margin-top: 1vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0px;
+}
+
+.abilities {
+    width: 100%;
+}
+
+.AUTitle {
+    padding-left: 10px;
+    background-color: var(--myTitleGrey);
+    height: 3vw;
+    font-size: 1.9vw;
+    color: black;
+
+}
+
+.ability {
+    font-family: oswald;
+    color: black;
+    font-size: 1.25vw;
+    font-weight: 300;
+    margin-bottom: 10px;
+    ;
+}
+
+.ability b {
+    font-family: oswald;
+    color: black;
+    font-weight: 600;
+}
+
+.activated {
+    filter: brightness(0.3);
+}
+
+.activateButton {
+    background-color: var(--myOrange);
+    position: absolute;
+    bottom: 10px;
+    width: 87.5vw;
+    height: 5vw;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 4.95VW;
+    cursor: pointer;
+}
+.activateButton:hover {
+    background-color: var(--myDarkestGrey);
+}
+
+.specialRule {
+    display: flex;
+    font-family: oswald;
+    justify-content: center;
+    color: black;
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.circleLarge {
+    margin-top: .25vw;
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: white !important;
+    border-radius: 100px;
+    margin-left: .3vw;
+}
+
+.pentagon {
+    margin-top: .2vw;
+	position: relative;
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-left: .3vw;
+	background-color: rgb(243, 0, 53) !important;
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.square {
+    margin-top: .32vw;
+	position: relative;
+    height: 1.4vw;
+    width: 1.4vw;
+    margin-left: .3vw;
+	background-color: rgb(71, 57, 180) !important;
 }
