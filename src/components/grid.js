@@ -86,7 +86,7 @@ const operativesArray = [
                 A: 4,
                 BS: "3+",
                 D: "2/3",
-                SR: <div className="specialRule oslwald">RNG<div className="pentagon"></div>, BLAST<div className="circleLarge"></div>, INDIRECT, EMP*, LIMITED<div className="square"></div></div>,
+                SR: ",",
                 Crit: ""
             },
             {
