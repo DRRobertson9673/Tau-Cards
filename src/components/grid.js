@@ -86,8 +86,8 @@ const operativesArray = [
                 A: 4,
                 BS: "3+",
                 D: "2/3",
-                SR: ",",
-                Crit: ""
+                SR: "-",
+                Crit: "-"
             },
             {
                 weaponName: "Fusion Grenade",
@@ -605,7 +605,7 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
 
     const operativeActivated = () => {
         console.log(id);
-        $("[name=" + "'" + id + "']").addClass("activated");
+        $(`[name='${id}']`).addClass("activated");
     }
 
     return <div id={id} className="operativeCardLarge hidden invisible" onClick={handleClickLarge}>
