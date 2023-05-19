@@ -12,8 +12,6 @@ import WeaponsEx from '../images/WeaponsEx.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
 import $ from 'jquery';
-import React, { useState } from 'react';
-
 
 const operativesArray = [
     {
