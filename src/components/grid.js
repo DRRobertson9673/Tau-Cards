@@ -11,10 +11,13 @@ import TIP from '../images/TIP.jpg';
 import WeaponsEx from '../images/WeaponsEx.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
+import $ from 'jquery';
+import React, { useState } from 'react';
+
 
 const operativesArray = [
     {
-        id: 8,
+        id: "8",
         image: Shas,
         operativeName: "SHAS'UI",
         type: "Marksman, Scout",
@@ -343,8 +346,18 @@ const operativesArray = [
     },
 ];
 
-const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes }) => {
-    return <div className="operativeCard">
+
+
+const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
+    const handleClick = () => {
+        $('.operativeCard').addClass("invisible");
+        setTimeout(() => $('.operativeCard').addClass("hidden"), 125);
+
+        setTimeout(() => $("#" + id).removeClass("hidden"), 125);
+        setTimeout(() => $("#" + id).removeClass("invisible"), 250);
+    };
+
+    return <div className="operativeCard" onClick={handleClick}>
         <div className="imageName">
             <div className="operativeImageHolder">
                 <img className="operativeImage" src={image} alt="" />
@@ -370,8 +383,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes }) => {
             <div className="statValue">{DF}</div>
             <div className="statValue">{SV}</div>
         </div>
-
-
         <div className="weaponsList">
             {Weapons.map(weapon => (
                 <div className="weapons">
@@ -379,24 +390,74 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes }) => {
                 </div>
             ))}
         </div>
-
         <div className="notesArea">
             <p>{Notes[0]}<br /><br />{Notes[1]}</p>
         </div>
-
     </div>;
 };
 
+const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
+    const handleClickLarge = () => {
 
 
+        setTimeout(() => $('.operativeCard').removeClass("invisible"), 250);
+        setTimeout(() => $('.operativeCard').removeClass("hidden"), 125);
+        
+        $('.operativeCardLarge').addClass("invisible");
+        setTimeout(() => $('.operativeCardLarge').addClass("hidden"), 125);
+    };
 
+    return <div id={id} className="operativeCardLarge hidden invisible" onClick={handleClickLarge}>
+        <div className="imageName">
+            <div className="operativeImageHolder">
+                <img className="operativeImage" src={image} alt="" />
+            </div>
+            <div className="nameNwounds">
+                <h1>{name}</h1>
+                <h2>{wounds}</h2>
+            </div>
+        </div>
+        <div className="woundsBar">
+        </div>
+        <div className="stats">
+            <div className="statName">M</div>
+            <div className="statName">APL</div>
+            <div className="statName">GA</div>
+            <div className="statName">DF</div>
+            <div className="statName">SV</div>
+        </div>
+        <div className="statValues">
+            <div className="statValue movement">{M}<div className="circle"></div></div>
+            <div className="statValue">{APL}</div>
+            <div className="statValue">{GA}</div>
+            <div className="statValue">{DF}</div>
+            <div className="statValue">{SV}</div>
+        </div>
+        <div className="weaponsList">
+            {Weapons.map(weapon => (
+                <div className="weapons">
+                    <div className="weaponName"><img className="attackIcon" src={weapon.weaponIcon} alt="" />{weapon.weaponName}</div>
+                </div>
+            ))}
+        </div>
+        <div className="notesArea">
+            <p>{Notes[0]}<br /><br />{Notes[1]}</p>
+        </div>
+    </div>;
+};
 
 function Grid() {
     return (
-        <div id="operativesGrid">
-            {operativesArray.map((card) => (
-                <Card key={card.id} name={card.operativeName} type={card.type} image={card.image} wounds={card.W} M={card.M} APL={card.APL} GA={card.GA} DF={card.DF} SV={card.SV} Weapons={card.Weapons} Notes={card.Notes} />
-            ))}
+        <div>
+            <div id="operativesGrid">
+                {operativesArray.map((card) => (
+                    <Card id={card.id} name={card.operativeName} type={card.type} image={card.image} wounds={card.W} M={card.M} APL={card.APL} GA={card.GA} DF={card.DF} SV={card.SV} Weapons={card.Weapons} Notes={card.Notes} />
+                ))}
+                                {operativesArray.map((cardLarge) => (
+                    <CardLarge id={cardLarge.id} name={cardLarge.operativeName} type={cardLarge.type} image={cardLarge.image} wounds={cardLarge.W} M={cardLarge.M} APL={cardLarge.APL} GA={cardLarge.GA} DF={cardLarge.DF} SV={cardLarge.SV} Weapons={cardLarge.Weapons} Notes={cardLarge.Notes} />
+                ))}
+            </div>
+
         </div>
     );
 }
