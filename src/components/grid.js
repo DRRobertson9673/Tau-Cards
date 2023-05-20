@@ -554,6 +554,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         setTimeout(() => $('.operativeCard').addClass("hidden"), 125);
         setTimeout(() => $("#" + id).removeClass("hidden"), 125);
         setTimeout(() => $("#" + id).removeClass("invisible"), 250);
+        $('.dashboard').addClass("hidden")
     };
 
     const [currentWound, setWound] = useState(wounds);
@@ -564,7 +565,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
             console.log('slowed');
             $(`[name='${id}']`).addClass("slowed");
         }
-        if (currentWound - 1 == 0) {
+        if (currentWound - 1 === 0) {
             $(`[name='${id}']`).addClass("dead");
         }
     };
@@ -616,13 +617,11 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
 
 const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities, UniqueActions, id }) => {
     const handleClickLarge = () => {
-
-
         setTimeout(() => $('.operativeCard').removeClass("invisible"), 250);
         setTimeout(() => $('.operativeCard').removeClass("hidden"), 125);
-
         $('.operativeCardLarge').addClass("invisible");
         setTimeout(() => $('.operativeCardLarge').addClass("hidden"), 125);
+        $('.dashboard').removeClass("hidden")
     };
 
     const operativeActivated = () => {

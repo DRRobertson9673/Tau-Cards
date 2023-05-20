@@ -1,6 +1,6 @@
 #operativesGrid {
-    height: 100vh;
     display: grid;
+    height: calc(95vh);
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1vw;

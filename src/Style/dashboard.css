@@ -1,0 +1,40 @@
+.dashboard {
+    z-index: 10;
+    position: fixed;
+    bottom: -55vh;
+    width: 100%;
+    height: 60vh;
+    background-color: aqua;
+    transition: all .5s;
+}
+
+.dashOpen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(23, 23, 23);
+}
+
+.dashClose {
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+}
+
+.open {
+    bottom: 0;
+}
+
+.close {
+    background-color: blueviolet;
+}
+
+.dot {
+    height: 1vw;
+    width: 1vw;
+    margin: 0.5vw;
+    background-color: var(--myDarkestGrey);
+    border-radius: 50%;
+}

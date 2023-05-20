@@ -19,4 +19,5 @@
 body {
   background-color: black;
   -webkit-font-smoothing: subpixel-antialiased;
+  overflow: hidden;
 }
