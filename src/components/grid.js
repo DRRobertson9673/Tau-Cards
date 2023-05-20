@@ -12,10 +12,11 @@ import WeaponsEx from '../images/WeaponsEx.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
 import $ from 'jquery';
+import { useState } from 'react';
 
 const operativesArray = [
     {
-        id: "8",
+        id: "operative1",
         image: Shas,
         operativeName: "SHAS'UI",
         type: "Marksman, Scout",
@@ -69,7 +70,7 @@ const operativesArray = [
         Notes: ["Can give engaged operatives a free dash.", "Operatives within square and visible get free mission action."]
     },
     {
-        id: 1,
+        id: "operative2",
         image: Grenadier,
         operativeName: "ASSAULT GRENADIER",
         type: "Staunch, Scout",
@@ -137,7 +138,7 @@ const operativesArray = [
         Notes: ""
     },
     {
-        id: 2,
+        id: "operative3",
         image: Blooded,
         operativeName: "BLOODED",
         type: "Type 1",
@@ -187,7 +188,7 @@ const operativesArray = [
         Notes: [""]
     },
     {
-        id: 3,
+        id: "operative4",
         image: Comms,
         operativeName: "COMMS SPECIALIST",
         type: "Type 1",
@@ -237,7 +238,7 @@ const operativesArray = [
         Notes: ["Can add 1APL to someone else"]
     },
     {
-        id: 4,
+        id: "operative5",
         image: DroneGuy,
         operativeName: "DRONE CONTROLLER",
         type: "Type 1",
@@ -288,7 +289,7 @@ const operativesArray = [
     },
 
     {
-        id: 6,
+        id: "operative6",
         image: ReconDrone,
         operativeName: "RECON DRONE",
         type: "Type 1",
@@ -338,7 +339,7 @@ const operativesArray = [
         Notes: ["Free Recon option at start", "Can activate operative with rerolls"]
     },
     {
-        id: 7,
+        id: "operative7",
         image: ShieldDrone,
         operativeName: "SHIELD DRONE",
         type: "Type 1",
@@ -380,7 +381,7 @@ const operativesArray = [
     },
 
     {
-        id: 9,
+        id: "operative8",
         image: TIP,
         operativeName: "TIP",
         type: "Type 1",
@@ -430,7 +431,7 @@ const operativesArray = [
         Notes: ["Targets aren't obscured", "Remove 1APL from enemy (engaged)"]
     },
     {
-        id: 5,
+        id: "operative9",
         image: Marksman,
         operativeName: "MARKSMAN",
         type: "Type 1",
@@ -489,7 +490,7 @@ const operativesArray = [
         Notes: ["Better overwatch"]
     },
     {
-        id: 10,
+        id: "operative10",
         image: WeaponsEx,
         operativeName: "WEAPONS EXPERT A",
         type: "Type 1",
@@ -544,49 +545,70 @@ const operativesArray = [
 
 
 
+
+
+
 const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
     const handleClick = () => {
         $('.operativeCard').addClass("invisible");
         setTimeout(() => $('.operativeCard').addClass("hidden"), 125);
-
         setTimeout(() => $("#" + id).removeClass("hidden"), 125);
         setTimeout(() => $("#" + id).removeClass("invisible"), 250);
     };
 
-    return <div name={id} className="operativeCard" onClick={handleClick}>
+    const [currentWound, setWound] = useState(wounds);
+
+    const handleDecreaseWound = () => {
+        setWound((prevWound) => prevWound - 1);
+        if (currentWound - 1 < (wounds / 2)) {
+            console.log('slowed');
+            $(`[name='${id}']`).addClass("slowed");
+        }
+        if (currentWound - 1 == 0) {
+            $(`[name='${id}']`).addClass("dead");
+        }
+    };
+
+    const handleIncreaseWound = () => {
+        setWound((prevWound) => wounds);
+        $(`[name='${id}']`).removeClass("dead");
+        $(`[name='${id}']`).removeClass("slowed");
+    };
+
+    return <div name={id} className="operativeCard">
         <div className="imageName">
             <div className="operativeImageHolder">
-                <img className="operativeImage" src={image} alt="" />
+                <img className="operativeImage" src={image} alt="" onClick={handleIncreaseWound} />
             </div>
             <div className="nameNwounds">
                 <h1>{name}</h1>
-                <h2>{wounds}</h2>
+                <h2 onClick={handleDecreaseWound}>{currentWound}</h2>
             </div>
         </div>
         <div className="woundsBar">
         </div>
-        <div className="stats">
+        <div className="stats" onClick={handleClick}>
             <div className="statName">M</div>
             <div className="statName">APL</div>
             <div className="statName">GA</div>
             <div className="statName">DF</div>
             <div className="statName">SV</div>
         </div>
-        <div className="statValues">
+        <div className="statValues" onClick={handleClick}>
             <div className="statValue movement">{M}<div className="circle"></div></div>
             <div className="statValue">{APL}</div>
             <div className="statValue">{GA}</div>
             <div className="statValue">{DF}</div>
             <div className="statValue">{SV}</div>
         </div>
-        <div className="weaponsList">
+        <div className="weaponsList" onClick={handleClick}>
             {Weapons.map(weapon => (
                 <div className="weapons">
                     <div className="weaponName"><img className="attackIcon" src={weapon.weaponIcon} alt="" />{weapon.weaponName}</div>
                 </div>
             ))}
         </div>
-        <div className="notesArea">
+        <div className="notesArea" onClick={handleClick}>
             <p>{Notes[0]}<br /><br />{Notes[1]}</p>
         </div>
     </div>;
@@ -657,7 +679,6 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
             ))}
         </div>
 
-
         <div className="abilitiesUniqueActions">
             <div className="abilities">
                 <div className="AUTitle">ABILITIES</div>
@@ -673,13 +694,11 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
             </div>
         </div>
         <div className="activateButton" onClick={operativeActivated}>ACTIVATE</div>
-
-
-
     </div>;
 };
 
 function Grid() {
+
     return (
         <div>
             <div id="operativesGrid">
