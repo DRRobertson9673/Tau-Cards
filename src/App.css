@@ -21,3 +21,27 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   overflow: hidden;
 }
+
+.rotate {
+  height: 20vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.rotate {
+  margin-top: 35vh;
+  display: none;
+}
+
+@media (orientation:portrait) {
+  .mainContent {
+    display: none;
+  }
+
+  .rotate {
+    display: flex;
+  }
+}

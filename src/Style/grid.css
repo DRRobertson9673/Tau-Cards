@@ -223,7 +223,7 @@ h2 {
 .imageSection {
     position: absolute;
     top: -1vw;
-    left: 44.5vw;
+    left: 46vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,9 +357,10 @@ h2 {
     font-family: oswald;
     color: black;
     font-size: 1.25vw;
+    line-height: 1.65vw;
     font-weight: 300;
-    margin-bottom: 10px;
-    ;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .ability b {

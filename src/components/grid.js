@@ -543,11 +543,6 @@ const operativesArray = [
     },
 ];
 
-
-
-
-
-
 const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
     const handleClick = () => {
         $('.operativeCard').addClass("invisible");
@@ -621,7 +616,7 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
         setTimeout(() => $('.operativeCard').removeClass("hidden"), 125);
         $('.operativeCardLarge').addClass("invisible");
         setTimeout(() => $('.operativeCardLarge').addClass("hidden"), 125);
-        $('.dashboard').removeClass("hidden")
+        setTimeout(() => $('.dashboard').removeClass("hidden"), 250);
     };
 
     const operativeActivated = () => {
