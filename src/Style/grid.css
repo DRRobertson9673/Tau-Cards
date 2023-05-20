@@ -1,12 +1,11 @@
 #operativesGrid {
-    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1.5vw;
-    grid-row-gap: 1.5vw;
-    padding: 1vw;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    padding: 3vw;
 }
 
 .operativeCard {
@@ -26,10 +25,10 @@
 
 h1 {
     position: relative;
-    left: -0.75vw;
+    left: -1vw;
     padding-top: 1vw;
-    font-size: 1.5vw;
-    line-height: 1.5vw;
+    font-size: 1.25vw;
+    line-height: 1.35vw;
     height: .5vw;
 }
 
