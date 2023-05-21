@@ -52,8 +52,8 @@ const operativesArray = [
                 detail: "Once per battle, when it is your turn to use a Strategic Ploy, if this operative is in the killzone, it can use this ability. If it does, select one Art of War to be in effect until the end of the Turning Point."
             },
             {
-                name: "Holographic Readout ",
-                detail: "Once per battle, when a friendly PATHFINDER operative (excluding a DRONE operative) is activated within ■ of and is Visible to this operative, this operative can use this ability. If it does, until the end of the friendly PATHFINDER operative's activation, it can perform one mission action for one less AP (to a minimum of 0AP)."
+                name: "",
+                detail: <div className="ability"><b>Holographic Readout </b>Once per battle, when a friendly PATHFINDER operative (excluding a DRONE operative) is activated within<div className="square"></div>of and is Visible to this operative, this operative can use this ability. If it does, until the end of the friendly PATHFINDER operative's activation, it can perform one mission action for one less AP (to a minimum of 0AP).</div>
             },
             {
                 name: "Balanced ",
@@ -87,51 +87,55 @@ const operativesArray = [
                 A: 4,
                 BS: "3+",
                 D: "2/3",
-                SR: "-",
+                SR: <div className="headerSR oswald">Rng<div className="SRpentagon"></div>, Blast<div className="SRCircle"></div>, Indirect, EMP*, Limited</div>,
                 Crit: "-"
             },
             {
                 weaponName: "Fusion Grenade",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "3+",
+                D: "4/3",
+                SR: <div className="headerSR oswald">Rng<div className="SRpentagon"></div>, Indirect, AP2, Limited</div>,
+                Crit: "MW3"
             },
             {
                 weaponName: "Pulse Carbine",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "4+",
+                D: "4/5",
+                SR: "-",
+                Crit: "-"
             },
             {
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "Grenadier ",
+                detail: "This operative is equipped with EMP, fusion and photon grenades and they do not cost any equipment points."
+            },
+            {
+                name: "Nanocrystalline Headgear ",
+                detail: "You can ignore any or all modifiers to this operative's APL and to the Weapon Skill and Ballistic Skill characteristics of its melee and ranged weapons respectively."
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Markerlight (1AP) ",
+                detail: ""
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "",
+                detail: <div className="ability"><b>Photon Grenade (1AP) </b>Select one enemy operative Visible to this operative. Roll one D6, subtracting 1 from the result as follows: - If that enemy operative is not in this operative's Line of Sight. - If that enemy operative is more than<div className="pentagon"></div>from this operative. On a 2+, that enemy operative gains a Photon token. While an operative has any Photon tokens, subtract<div className="abilityCircle"></div>from its Movement characteristic and it cannot perform Dash actions. At the end of an operative's activation, remove all Photon tokens it has. This operative can only perform this action once, and cannot perform this action if it is within Engagement Range of an enemy operative.</div>
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -152,36 +156,32 @@ const operativesArray = [
             {
                 weaponName: "Suppressed Pulse Carbine (silent)",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "3+",
+                D: "4/5",
+                SR: "Silent",
+                Crit: "-"
             },
             {
                 weaponName: "Bionic Arm",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "4+",
+                D: "3/4",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "",
+                detail: ""
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
-            },
-            {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Markerlight (1AP)",
+                detail: ""
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -202,36 +202,33 @@ const operativesArray = [
             {
                 weaponName: "Pulse Carbine",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "4+",
+                D: "4/5",
+                SR: "-",
+                Crit: "-"
             },
             {
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
-            {
-                name: "ability name",
-                detail: "ability detail"
-            }
+
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Markerlight (1AP)",
+                detail: ""
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "",
+                detail: <div className="ability"><b>Signal (1AP) </b>Select one friendly PATHFINDER operative within<div className="pentagon"></div>of and Visible to this operative. Add 1 to its APL. This operative cannot perform this action if it is within Engagement Range of an enemy operative.</div>
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -252,37 +249,37 @@ const operativesArray = [
             {
                 weaponName: "Pulse Carbine",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "4+",
+                D: "4/5",
+                SR: "-",
+                Crit: "-"
             },
             {
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "",
+                detail: <div className="ability"><b>Drone Scout </b>During deployment, if this operative was selected for deployment, you can set up one friendly PATHFINDER DRONE operative with a Conceal order anywhere in the killzone that is wholly within<div className="pentagon"></div>of your dropzone, more than<div className="pentagon"></div>from enemy operatives and more than<div className="square"></div>from the enemy dropzone.</div>
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Markerlight (1AP) ",
+                detail: ""
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
-            }
+                name: "Control Drone (1AP) ",
+                detail: "Select one friendly PATHFINDER DRONE operative, then select one of the following: - If that DRONE operative is Ready, after this activation ends, you can activate that DRONE operative and until the end of the Turning Point, it is not considered to have the first three bullet points of its Artificial Intelligence ability. - If that DRONE operative has been activated during this Turning Point, perform a free Dash or Shoot action with it. If you perform a Shoot action, for that action's shooting attack, worsen the Ballistic Skill characteristic of its ranged weapons by 1. This operative cannot perform this action if it is within Engagement Range of an enemy operative."
+            },
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
         Notes: ["During deployment - set up drone in killzone.", "Activate drone for free"]
@@ -303,36 +300,40 @@ const operativesArray = [
             {
                 weaponName: "Burst Cannon",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 6,
+                BS: "4+",
+                D: "3/4",
+                SR: "Heavy, Ceaseless, Fusillade",
+                Crit: "-"
             },
             {
                 weaponName: "Ram",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "3/4",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "Recon Suite ",
+                detail: "During the mission sequence, if this friendly operative was selected for deployment, after resolving your selected option in the Scouting step, you can select and resolve a Recon option in addition to any other options. Initiative is still determined by your original selection."
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Analyse ",
+                detail: "Select one enemy operative Visible to this operative, then select one other ready friendly PATHFINDER operative that is not within Engagement Range of an enemy operative. After this operative's activation ends, you can activate that other friendly operative, and during its activation, each time it makes a shooting attack against that enemy operative, in the Roll Attack Dice step of that shooting attack, you can re-roll any or all of your attack dice. This operative cannot perform this action if it is within Engagement Range of enemy operatives."
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "",
+                detail: <div className="abilitySmall"><b>Artificial Intelligence: </b>This operative cannot perform missions actions or the Pick Up action. For the purposes of determining control of objective markers, treat this operative's APL as 1 lower. Each time a shooting attack is made against this operative, in the Roll Defence Dice step of that shooting attack, if it has an Engage order, defence dice cannot be automatically retained as a result of Cover. Unless otherwise specifed, this operative cannot be equipped with equipment.</div>
+            },
+            {
+                name: "",
+                detail: <div className="abilitySmall"><b>Saviour Protocols: </b>When a PATHFINDER is selected as target for a shooting attack, if DRONE operative is Visible and within<div className="abilityCircle"></div>is not in Engagement Range of an enemy and not protecting any other operatives, it can protect PATHFINDER until the end of the Turning Point (or not in<div className="smallAbilityCircle"></div>). Shooting attacks target DRONE instead. Cannot retain dice from cover. Cannot be protected from BLAST etc.</div>
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -353,27 +354,27 @@ const operativesArray = [
             {
                 weaponName: "Ram",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "Shield Generator ",
+                detail: "This operative has a 4+ invulnerable save. Each time this operative would lose a wound that is not as a result of a mortal wound, roll one D6: on a 5+, that wound is not lost."
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "",
+                detail: <div className="abilitySmall"><b>Artificial Intelligence: </b>This operative cannot perform missions actions or the Pick Up action. For the purposes of determining control of objective markers, treat this operative's APL as 1 lower. Each time a shooting attack is made against this operative, in the Roll Defence Dice step of that shooting attack, if it has an Engage order, defence dice cannot be automatically retained as a result of Cover. Unless otherwise specifed, this operative cannot be equipped with equipment.</div>
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "",
+                detail: <div className="abilitySmall"><b>Saviour Protocols: </b>When a PATHFINDER is selected as target for a shooting attack, if DRONE operative is Visible and within<div className="abilityCircle"></div>is not in Engagement Range of an enemy and not protecting any other operatives, it can protect PATHFINDER until the end of the Turning Point (or not in<div className="smallAbilityCircle"></div>). Shooting attacks target DRONE instead. Cannot retain dice from cover. Cannot be protected from BLAST etc.</div>
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -395,36 +396,36 @@ const operativesArray = [
             {
                 weaponName: "Pulse Carbine",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "4+",
+                D: "4/5",
+                SR: "-",
+                Crit: "-"
             },
             {
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "Multi-spectral Sensor ",
+                detail: "Each time this operative makes a shooting attack, when selecting a valid target for that shooting attack, enemy operatives are not Obscured."
             }
         ],
         UniqueActions: [
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "Markerlight (1AP) ",
+                detail: ""
             },
             {
-                name: "Unique action ",
-                detail: "action detail"
+                name: "System Jam (1AP) ",
+                detail: "Select one enemy operative Visible to this operative. Subtract 1 from its APL. This operative cannot perform this action if it has a Conceal order or if it is within Engagement Range of an enemy operative."
             }
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
@@ -445,46 +446,39 @@ const operativesArray = [
             {
                 weaponName: "Marksman Rail Rifle - standard",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "3+",
+                D: "4/4",
+                SR: "AP1, Lethal 5+",
+                Crit: "MW2"
             },
             {
                 weaponName: "Marksman Rail Rifle Dart - Round",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "3+",
+                D: "3/3",
+                SR: "AP1, Silent",
+                Crit: "MW2"
             },
             {
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
             {
-                name: "ability name",
-                detail: "ability detail"
+                name: "Inertial Dampener ",
+                detail: "Each time this operative performs an Overwatch action, for that action's shooting attack, do not worsen the Ballistic Skill characteristic of its marksman rail rifle as a result of performing an Overwatch action."
             }
         ],
         UniqueActions: [
-            {
-                name: "Unique action ",
-                detail: "action detail"
-            },
-            {
-                name: "Unique action ",
-                detail: "action detail"
-            }
+
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
         Notes: ["Better overwatch"]
@@ -492,7 +486,7 @@ const operativesArray = [
     {
         id: "operative10",
         image: WeaponsEx,
-        operativeName: "WEAPONS EXPERT A",
+        operativeName: "WEAPONS EXPERT",
         type: "Type 1",
         M: 3,
         APL: 2,
@@ -502,41 +496,29 @@ const operativesArray = [
         W: 7,
         Weapons: [
             {
-                weaponId: 1,
                 weaponName: "Rail Rifle",
                 weaponIcon: rangedIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 4,
+                BS: "4+",
+                D: "4/4",
+                SR: "AP1, Lethal 5+",
+                Crit: "MW2"
             },
             {
-                weaponId: 2,
                 weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 1,
-                BS: 1,
-                D: 1,
-                SR: "",
-                Crit: ""
+                A: 3,
+                BS: "5+",
+                D: "2/3",
+                SR: "-",
+                Crit: "-"
             }
         ],
         Abilities: [
-            {
-                name: "ability name",
-                detail: "ability detail"
-            }
+
         ],
         UniqueActions: [
-            {
-                name: "Unique action ",
-                detail: "action detail"
-            },
-            {
-                name: "Unique action ",
-                detail: "action detail"
-            }
+
         ],
         KeyWords: ["Keyword 1", "Keyword 2"],
         Notes: [""]
@@ -544,6 +526,11 @@ const operativesArray = [
 ];
 
 const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
+    const [content, setContent] = useState('-');
+    const handleContentChange = (event) => {
+        setContent(event.target.value);
+    };
+
     const handleClick = () => {
         $('.operativeCard').addClass("invisible");
         setTimeout(() => $('.operativeCard').addClass("hidden"), 125);
@@ -554,12 +541,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
 
     const [currentMove, setMove] = useState(M);
 
-
-
-
-
     const [currentWound, setWound] = useState(wounds);
-
     const handleDecreaseWound = () => {
         setWound((prevWound) => prevWound - 1);
         if (currentWound - 1 < (wounds / 2)) {
@@ -619,6 +601,12 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         <div className="notesArea" onClick={handleClick}>
             <p>{Notes[0]}<br /><br />{Notes[1]}</p>
         </div>
+        <div className="equipmentLine">Equipment:<div className="editableContent" contentEditable onInput={handleContentChange}>{content}</div></div>
+
+
+
+
+
     </div>;
 };
 
