@@ -402,7 +402,7 @@ h2 {
     margin-top: .25vw;
     height: 1.5vw;
     width: 1.5vw;
-    background-color: white !important;
+    background: white;
     border-radius: 50%;
     margin-left: .3vw;
 }
