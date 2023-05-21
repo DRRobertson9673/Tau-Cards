@@ -52,6 +52,14 @@ const operativesArray = [
                 detail: "Once per battle, when it is your turn to use a Strategic Ploy, if this operative is in the killzone, it can use this ability. If it does, select one Art of War to be in effect until the end of the Turning Point."
             },
             {
+                name: "Mont’ka",
+                detail: "Each time a friendly PATHFINDER operative is activated, if it has an Engage order for that activation, it can perform a free Dash action during that activation."
+            },
+            {
+                name: "Kauyon",
+                detail: "Each time a shooting attack is made against a friendly PATHFINDER operative, before rolling your defence dice, if it is in Cover, one additional dice can be retained as a successful normal save as a result of Cover."
+            },
+            {
                 name: "",
                 detail: <div className="ability"><b>Holographic Readout </b>Once per battle, when a friendly PATHFINDER operative (excluding a DRONE operative) is activated within<div className="square"></div>of and is Visible to this operative, this operative can use this ability. If it does, until the end of the friendly PATHFINDER operative's activation, it can perform one mission action for one less AP (to a minimum of 0AP).</div>
             },
