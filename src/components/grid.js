@@ -582,6 +582,8 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         setMove((prevmov) => M);
         $(`[name='${id}']`).children().eq(2).removeClass("grayscale");
         $(`[name='${id}']`).children().eq(0).children().eq(0).removeClass("grayscale grayborder");
+        $(`[name='${id}']`).children().eq(6).removeClass("grayscale");
+        $(`[name='${id}']`).children().eq(6).children().eq(0).removeClass("grayscale");
     };
 
     return <div name={id} className="operativeCard">

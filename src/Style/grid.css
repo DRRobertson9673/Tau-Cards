@@ -554,14 +554,14 @@ h2 {
     position: absolute;
     background-color: var(--myOrange);
     z-index: 1;
-    top: -14.7vW;
+    top: -17.8vW;
 }
 
 .dropdownOption {
     padding-left: 0.4vw;
     font-family: oswald;
-    font-size: 0.9vw;
-    line-height: 1.6vw;
+    font-size: 01vw;
+    line-height: 2vw;
     text-decoration: none;
 }
 
