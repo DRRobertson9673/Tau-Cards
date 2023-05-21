@@ -526,10 +526,28 @@ const operativesArray = [
 ];
 
 const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
-    const [content, setContent] = useState('-');
-    const handleContentChange = (event) => {
-        setContent(event.target.value);
+
+
+
+
+    const [selectedValue, setSelectedValue] = useState(<div className="equipmentTriangle"><div className="equipmentTriangleInner"></div></div>);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleDropdownToggle = () => {
+        setIsOpen(!isOpen);
     };
+
+    const handleValueSelect = (value) => {
+        setSelectedValue(value);
+        setIsOpen(false);
+        $(`[name='${id}']`).children().eq(6).children().eq(0).removeClass("noSelection");
+    };
+
+
+
+
+
+
 
     const handleClick = () => {
         $('.operativeCard').addClass("invisible");
@@ -601,7 +619,40 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         <div className="notesArea" onClick={handleClick}>
             <p>{Notes[0]}<br /><br />{Notes[1]}</p>
         </div>
-        <div className="equipmentLine">Equipment:<div className="editableContent" contentEditable onInput={handleContentChange}>{content}</div></div>
+        <div className="dropdown equipmentLine">
+            <div className="dropdown-btn noSelection" onClick={handleDropdownToggle}>
+                {selectedValue}
+            </div>
+            {isOpen && (
+                <div className="dropdown-content">
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect(<div className="equipmentTriangle"><div className="equipmentTriangleInner"></div></div>)}><div className="equipmentTriangleDown"><div className="equipmentTriangleInnerDown"></div></div></a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('HIGH-INTENSITY MARKERLIGHT')}>
+                        HIGH-INTENSITY MARKERLIGHT (2EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('CLIMBING EQUIPMENT')}>
+                        CLIMBING EQUIPMENT (1EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('FUSION GRENADE')}>
+                        FUSION GRENADE (4EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('PHOTON GRENADE')}>
+                        PHOTON GRENADE (2EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('DRONE REPAIR KIT')}>
+                        DRONE REPAIR KIT (2EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('TARGET ANALYSIS OPTIC')}>
+                        TARGET ANALYSIS OPTIC (2EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('EMP GRENADE')}>
+                        EMP GRENADE (2EP)
+                    </a>
+                    <a className="dropdownOption" href="#" onClick={() => handleValueSelect('ORBITAL SURVEY UPLINK')}>
+                        ORBITAL SURVEY UPLINK (3EP)
+                    </a>
+                </div>
+            )}
+        </div>
 
 
 
