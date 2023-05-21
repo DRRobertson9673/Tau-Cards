@@ -583,3 +583,37 @@ h2 {
     background-color: black;
     opacity: 0.2;
 }
+
+.pentagonPloy {
+    display: inline-block;
+    margin-top: .2vw;
+    position: relative;
+    height: 1.3vw;
+    width: 1.3vw;
+    margin-left: .3vw;
+    margin-right: .3vw;
+    background-color: white !important;
+    clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.squarePloy {
+    display: inline-block;
+    margin-top: .32vw;
+    position: relative;
+    height: 1.2vw;
+    width: 1.2vw;
+    margin-left: .3vw;
+    margin-RIGHT: .3vw;
+    background-color: white !important;
+}
+
+.circlePloy {
+    display: inline-block;
+    height: 1.2vw;
+    width: 1.2vw;
+    background: white;
+    border-radius: 50%;
+    margin-left: .3vw;
+    margin-right: .2vw;
+    margin-bottom: .1vw;
+}

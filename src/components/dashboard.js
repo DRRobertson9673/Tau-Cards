@@ -124,17 +124,17 @@ function Dashboard() {
                             <div className="stratHeader">
                                 <div className="stratName">BONDED</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Until the end of the Turning Point, each time a friendly PATHFINDER operative makes a shooting attack, in the Roll Attack Dice step of that shooting attack, if it is within square of another friendly PATHFINDER operative (excluding a DRONE operative), you can re-roll one of your attack dice.</div>
+                            <div className="stratContent">Until the end of the Turning Point, each time a friendly PATHFINDER operative makes a shooting attack, in the Roll Attack Dice step of that shooting attack, if it is within <div className="squarePloy"></div> of another friendly PATHFINDER operative (excluding a DRONE operative), you can re-roll one of your attack dice.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">DETERMINED TACTICIAN</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">If a friendly SHAS’UI PATHFINDER operative is in the killzone and it used its Art of War ability in the previous Turning Point, you can use this Strategic Ploy. Until the end of the Turning Point, while a friendly PATHFINDER operative is within pentagon of and Visible to a friendly SHAS’UI operative, it treats the same Art of War that was in effect for your kill team in the previous Turning Point as being in effect for this Turning Point. Note that means for Mont’ka, it can only perform that free Dash action if it is within pentagon of and Visible to a friendly SHAS’UI operative when that action is declared. You can only use this Strategic Ploy once.</div>
+                            <div className="stratContent">If a friendly SHAS’UI PATHFINDER operative is in the killzone and it used its Art of War ability in the previous Turning Point, you can use this Strategic Ploy. Until the end of the Turning Point, while a friendly PATHFINDER operative is within <div className="pentagonPloy"></div> of and Visible to a friendly SHAS’UI operative, it treats the same Art of War that was in effect for your kill team in the previous Turning Point as being in effect for this Turning Point. Note that means for Mont’ka, it can only perform that free Dash action if it is within <div className="squarePloy"></div> of and Visible to a friendly SHAS’UI operative when that action is declared. You can only use this Strategic Ploy once.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">RECON SWEEP</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Friendly PATHFINDER operatives that are wholly within pentagon of any killzone edge can immediately perform a free Dash action, but only if they can finish that move wholly within pentagon of a killzone edge that is not your own killzone edge.</div>
+                            <div className="stratContent">Friendly PATHFINDER operatives that are wholly within <div className="squarePloy"></div> of any killzone edge can immediately perform a free Dash action, but only if they can finish that move wholly within <div className="squarePloy"></div> of a killzone edge that is not your own killzone edge.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">TAKE COVER</div><div className="stratCost">1CP</div>
@@ -150,7 +150,7 @@ function Dashboard() {
                             <div className="stratHeader">
                                 <div className="stratName">A WORTHY CAUSE</div><div className="stratCost">2CP</div>
                             </div>
-                            <div className="stratContent">Use this Tactical Ploy at the start of the Firefight phase. Select one ready friendly PATHFINDER operative (excluding a DRONE operative) that is within crop_square of any enemy operatives or within radio_button_unchecked of the centre of an objective marker and activate it. Once that operative has completed its activation, the player who has the Initiative activates an operative as normal. This ploy can only be used once per battle, and only if you do not have the initiative.</div>
+                            <div className="stratContent">Use this Tactical Ploy at the start of the Firefight phase. Select one ready friendly PATHFINDER operative (excluding a DRONE operative) that is within <div className="squarePloy"></div> of any enemy operatives or within <div className="circlePloy"></div> of the centre of an objective marker and activate it. Once that operative has completed its activation, the player who has the Initiative activates an operative as normal. This ploy can only be used once per battle, and only if you do not have the initiative.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">REPOSITION</div><div className="stratCost">1CP</div>
@@ -160,7 +160,7 @@ function Dashboard() {
                             <div className="stratHeader">
                                 <div className="stratName">SUPPORTING FIRE</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Use this Tactical Ploy in the Firefight phase, when a Shoot action is declared for a friendly PATHFINDER operative. In the Select Valid Target step of that shooting attack, you must select an enemy operative that is within Engagement Range of a friendly operative and within pentagon of the active operative, and that enemy operative cannot be in Cover as a result of friendly operatives’ bases. Note, however, that in the Roll Defence Dice step of that shooting attack, the enemy operative can be in Cover as a result of friendly operatives’ bases.</div>
+                            <div className="stratContent">Use this Tactical Ploy in the Firefight phase, when a Shoot action is declared for a friendly PATHFINDER operative. In the Select Valid Target step of that shooting attack, you must select an enemy operative that is within Engagement Range of a friendly operative and within <div className="pentagonPloy"></div> of the active operative, and that enemy operative cannot be in Cover as a result of friendly operatives’ bases. Note, however, that in the Roll Defence Dice step of that shooting attack, the enemy operative can be in Cover as a result of friendly operatives’ bases.</div>
                         </div>
                     </div>
                 </div>
