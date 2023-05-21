@@ -626,31 +626,31 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
             </div>
             {isOpen && (
                 <div className="dropdown-content">
-                    <a className="dropdownOption" onClick={() => handleValueSelect(<div className="equipmentTriangle"></div>)}><div className="equipmentTriangleDown"></div></a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('HIGH-INTENSITY MARKERLIGHT')}>
+                    <div className="dropdownOption" onClick={() => handleValueSelect(<div className="equipmentTriangle"></div>)}><div className="equipmentTriangleDown"></div></div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('HIGH-INTENSITY MARKERLIGHT')}>
                         HIGH-INTENSITY MARKERLIGHT (2EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('CLIMBING EQUIPMENT')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('CLIMBING EQUIPMENT')}>
                         CLIMBING EQUIPMENT (1EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('FUSION GRENADE')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('FUSION GRENADE')}>
                         FUSION GRENADE (4EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('PHOTON GRENADE')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('PHOTON GRENADE')}>
                         PHOTON GRENADE (2EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('DRONE REPAIR KIT')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('DRONE REPAIR KIT')}>
                         DRONE REPAIR KIT (2EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('TARGET ANALYSIS OPTIC')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('TARGET ANALYSIS OPTIC')}>
                         TARGET ANALYSIS OPTIC (2EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('EMP GRENADE')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('EMP GRENADE')}>
                         EMP GRENADE (2EP)
-                    </a>
-                    <a className="dropdownOption" onClick={() => handleValueSelect('ORBITAL SURVEY UPLINK')}>
+                    </div>
+                    <div className="dropdownOption" onClick={() => handleValueSelect('ORBITAL SURVEY UPLINK')}>
                         ORBITAL SURVEY UPLINK (3EP)
-                    </a>
+                    </div>
                 </div>
             )}
         </div>
