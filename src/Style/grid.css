@@ -439,10 +439,18 @@ h2 {
     cursor: pointer;
 }
 
-.slowed {
-    filter: grayscale(1);
-}
-
 .dead {
     filter: brightness(0);
+}
+
+.slowed {
+    border: solid .2vw var(--myDarkestGrey);
+}
+
+.grayscale {
+    background-color: var(--myDarkestGrey);
+}
+
+.grayborder {
+    border-top: solid .15vw var(--myDarkestGrey);
 }

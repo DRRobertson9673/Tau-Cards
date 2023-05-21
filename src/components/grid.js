@@ -552,6 +552,12 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         $('.dashboard').addClass("hidden")
     };
 
+    const [currentMove, setMove] = useState(M);
+
+
+
+
+
     const [currentWound, setWound] = useState(wounds);
 
     const handleDecreaseWound = () => {
@@ -559,6 +565,9 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         if (currentWound - 1 < (wounds / 2)) {
             console.log('slowed');
             $(`[name='${id}']`).addClass("slowed");
+            setMove((prevmov) => 1);
+            $(`[name='${id}']`).children().eq(2).addClass("grayscale");
+            $(`[name='${id}']`).children().eq(0).children().eq(0).addClass("grayscale grayborder");
         }
         if (currentWound - 1 === 0) {
             $(`[name='${id}']`).addClass("dead");
@@ -569,6 +578,9 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         setWound((prevWound) => wounds);
         $(`[name='${id}']`).removeClass("dead");
         $(`[name='${id}']`).removeClass("slowed");
+        setMove((prevmov) => M);
+        $(`[name='${id}']`).children().eq(2).removeClass("grayscale");
+        $(`[name='${id}']`).children().eq(0).children().eq(0).removeClass("grayscale grayborder");
     };
 
     return <div name={id} className="operativeCard">
@@ -591,7 +603,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
             <div className="statName">SV</div>
         </div>
         <div className="statValues" onClick={handleClick}>
-            <div className="statValue movement">{M}<div className="circle"></div></div>
+            <div className="statValue movement">{currentMove}<div className="circle"></div></div>
             <div className="statValue">{APL}</div>
             <div className="statValue">{GA}</div>
             <div className="statValue">{DF}</div>
