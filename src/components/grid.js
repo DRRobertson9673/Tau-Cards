@@ -572,7 +572,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         if (currentWound - 1 < (wounds / 2)) {
             console.log('slowed');
             $(`[name='${id}']`).addClass("slowed");
-            setMove((prevmov) => 1);
+            setMove((prevmov) => 2);
             $(`[name='${id}']`).children().eq(2).addClass("grayscale");
             $(`[name='${id}']`).children().eq(0).children().eq(0).addClass("grayscale grayborder");
             $(`[name='${id}']`).children().eq(6).addClass("grayscale");
