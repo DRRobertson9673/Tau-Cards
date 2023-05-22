@@ -12,6 +12,7 @@
 }
 
 .operativeCard {
+    min-width: 18vw;
     position: relative;
     background-color: black;
     border: solid .2vw var(--myOrange);
