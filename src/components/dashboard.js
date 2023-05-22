@@ -129,12 +129,12 @@ function Dashboard() {
                             <div className="stratHeader">
                                 <div className="stratName">DETERMINED TACTICIAN</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">If a friendly SHAS’UI PATHFINDER operative is in the killzone and it used its Art of War ability in the previous Turning Point, you can use this Strategic Ploy. Until the end of the Turning Point, while a friendly PATHFINDER operative is within <div className="pentagonPloy"></div> of and Visible to a friendly SHAS’UI operative, it treats the same Art of War that was in effect for your kill team in the previous Turning Point as being in effect for this Turning Point. Note that means for Mont’ka, it can only perform that free Dash action if it is within <div className="squarePloy"></div> of and Visible to a friendly SHAS’UI operative when that action is declared. You can only use this Strategic Ploy once.</div>
+                            <div className="stratContent">If a friendly SHAS’UI PATHFINDER operative is in the killzone and it used its Art of War ability in the previous Turning Point, you can use this Strategic Ploy. Until the end of the Turning Point, while a friendly PATHFINDER operative is within <div className="pentagonPloy"></div> of and Visible to a friendly SHAS’UI operative, it treats the same Art of War that was in effect for your kill team in the previous Turning Point as being in effect for this Turning Point. Note that means for Mont’ka, it can only perform that free Dash action if it is within <div className="pentagonPloy"></div> of and Visible to a friendly SHAS’UI operative when that action is declared. You can only use this Strategic Ploy once.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">RECON SWEEP</div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Friendly PATHFINDER operatives that are wholly within <div className="squarePloy"></div> of any killzone edge can immediately perform a free Dash action, but only if they can finish that move wholly within <div className="squarePloy"></div> of a killzone edge that is not your own killzone edge.</div>
+                            <div className="stratContent">Friendly PATHFINDER operatives that are wholly within <div className="pentagonPloy"></div> of any killzone edge can immediately perform a free Dash action, but only if they can finish that move wholly within <div className="pentagonPloy"></div> of a killzone edge that is not your own killzone edge.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">TAKE COVER</div><div className="stratCost">1CP</div>

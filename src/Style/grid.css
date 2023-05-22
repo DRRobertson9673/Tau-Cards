@@ -1,4 +1,7 @@
 #operativesGrid {
+    position: fixed;
+    left: 0;
+    top: 0;
     display: grid;
     height: calc(95vh);
     grid-template-columns: repeat(5, 1fr);
@@ -182,6 +185,9 @@ h2 {
 }
 
 .operativeCardLarge {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
     background-color: var(--myLightGrey);
     width: 92vw;
     height: 89vh;

@@ -392,7 +392,7 @@ const operativesArray = [
     {
         id: "operative8",
         image: TIP,
-        operativeName: "TIP",
+        operativeName: "TRANS'",
         type: "Type 1",
         M: 3,
         APL: 2,
@@ -592,6 +592,7 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         $(`[name='${id}']`).children().eq(0).children().eq(0).removeClass("grayscale grayborder");
         $(`[name='${id}']`).children().eq(6).removeClass("grayscale");
         $(`[name='${id}']`).children().eq(6).children().eq(0).removeClass("grayscale");
+        $(`[name='${id}']`).removeClass("activated");
     };
 
     return <div name={id} className="operativeCard">
@@ -682,7 +683,6 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
     };
 
     const operativeActivated = () => {
-        console.log(id);
         $(`[name='${id}']`).addClass("activated");
     }
 
