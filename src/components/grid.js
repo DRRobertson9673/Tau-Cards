@@ -534,10 +534,6 @@ const operativesArray = [
 ];
 
 const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) => {
-
-
-
-
     const [selectedValue, setSelectedValue] = useState(<div className="equipmentTriangle"></div>);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -549,12 +545,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
         setSelectedValue(value);
         setIsOpen(false);
     };
-
-
-
-
-
-
 
     const handleClick = () => {
         $('.operativeCard').addClass("invisible");
@@ -665,11 +655,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
                 </div>
             )}
         </div>
-
-
-
-
-
     </div>;
 };
 
