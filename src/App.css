@@ -45,7 +45,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 701px) and (orientation:portrait) {
+@media screen and (min-width: 901px) and (orientation:portrait) {
   .mainContent {
     display: none;
   }
@@ -55,7 +55,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) and (min-aspect-ratio: 16/9) {
+@media screen and (min-width: 900px) and (min-aspect-ratio: 16/9) {
   .mainContent {
     display: none;
   }
@@ -65,7 +65,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .mainContent {
     display: none;
   }
