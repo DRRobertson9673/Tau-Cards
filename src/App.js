@@ -3,6 +3,7 @@ import Grid from './components/grid'
 import Dashboard from './components/dashboard'
 import rotate from './images/rotate.svg';
 import windowWidth from './images/windowWidth.svg';
+import noMobile from './images/noMobile.svg';
 import $ from 'jquery';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       </div>
       <img className="rotate" src={rotate} alt="" />
       <img className="windowWidth" src={windowWidth} alt="" />
+      <img className="noMobile" src={noMobile} alt="" />
     </div>
   );
 }

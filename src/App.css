@@ -33,13 +33,19 @@ body {
   display: none;
 }
 
+.noMobile {
+  height: 60vh;
+  margin-top: 18vh;
+  display: none;
+}
+
 .windowWidth {
   height: 20vh;
   margin-top: 35vh;
   display: none;
 }
 
-@media (orientation:portrait) {
+@media screen and (min-width: 701px) and (orientation:portrait) {
   .mainContent {
     display: none;
   }
@@ -49,12 +55,21 @@ body {
   }
 }
 
-@media screen and (min-width: 575px) and (min-aspect-ratio: 16/9) {
+@media screen and (min-width: 700px) and (min-aspect-ratio: 16/9) {
   .mainContent {
     display: none;
   }
 
   .windowWidth {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mainContent {
+    display: none;
+  }
+  .noMobile {
     display: flex;
   }
 }
