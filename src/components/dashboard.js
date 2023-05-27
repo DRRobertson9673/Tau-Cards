@@ -162,7 +162,7 @@ function Dashboard() {
                         <div className="tacPloysArea hidden">
 
                             <div className="stratHeader">
-                                <div className="stratName">MARK ENEMY MOVEMENTS</div><div className="stratCost">2CP</div>
+                                <div className="stratName">MARK ENEMY MOVEMENTS</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -172,7 +172,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">PATIENT HUNTER</div><div className="stratCost">2CP</div>
+                                <div className="stratName">PATIENT HUNTER</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -182,7 +182,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">KILLING BLOW</div><div className="stratCost">2CP</div>
+                                <div className="stratName">KILLING BLOW</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -192,7 +192,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">OUTFLANK</div><div className="stratCost">2CP</div>
+                                <div className="stratName">OUTFLANK</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -203,7 +203,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">COURIER</div><div className="stratCost">2CP</div>
+                                <div className="stratName">COURIER</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -213,7 +213,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">PLANT TRANSPONDER</div><div className="stratCost">2CP</div>
+                                <div className="stratName">PLANT TRANSPONDER</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -225,7 +225,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">SECURE VANTAGE</div><div className="stratCost">2CP</div>
+                                <div className="stratName">SECURE VANTAGE</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent"><i>Not usable in Close Quarters</i><br />You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -236,7 +236,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">RECOVER ITEM</div><div className="stratCost">2CP</div>
+                                <div className="stratName">RECOVER ITEM</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You must reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -246,7 +246,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">SURGE FORWARD</div><div className="stratCost">2CP</div>
+                                <div className="stratName">SURGE FORWARD</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
@@ -256,7 +256,7 @@ function Dashboard() {
                             </div>
 
                             <div className="stratHeader">
-                                <div className="stratName">SECURE UNEXPLORED ROOMS</div><div className="stratCost">2CP</div>
+                                <div className="stratName">SECURE UNEXPLORED ROOMS</div><div className="stratCost"></div>
                             </div>
                             <div className="stratContent"><i>Close Quarters only</i><br />You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>

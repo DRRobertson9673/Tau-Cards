@@ -52,11 +52,11 @@ const operativesArray = [
                 detail: "Once per battle, when it is your turn to use a Strategic Ploy, if this operative is in the killzone, it can use this ability. If it does, select one Art of War to be in effect until the end of the Turning Point."
             },
             {
-                name: "Mont’ka",
+                name: "Mont’ka ",
                 detail: "Each time a friendly PATHFINDER operative is activated, if it has an Engage order for that activation, it can perform a free Dash action during that activation."
             },
             {
-                name: "Kauyon",
+                name: "Kauyon ",
                 detail: "Each time a shooting attack is made against a friendly PATHFINDER operative, before rolling your defence dice, if it is in Cover, one additional dice can be retained as a successful normal save as a result of Cover."
             },
             {
