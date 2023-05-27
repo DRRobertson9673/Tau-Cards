@@ -22,16 +22,19 @@ body {
   overflow: hidden;
 }
 
-.rotate {
-  height: 20vh;
-}
-
 .content {
   display: flex;
   justify-content: center;
 }
 
 .rotate {
+  height: 20vh;
+  margin-top: 35vh;
+  display: none;
+}
+
+.windowWidth {
+  height: 20vh;
   margin-top: 35vh;
   display: none;
 }
@@ -42,6 +45,16 @@ body {
   }
 
   .rotate {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 575px) and (min-aspect-ratio: 16/9) {
+  .mainContent {
+    display: none;
+  }
+
+  .windowWidth {
     display: flex;
   }
 }

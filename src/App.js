@@ -2,6 +2,7 @@ import './App.css';
 import Grid from './components/grid'
 import Dashboard from './components/dashboard'
 import rotate from './images/rotate.svg';
+import windowWidth from './images/windowWidth.svg';
 import $ from 'jquery';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <div className="screen hidden" onClick={handleScreenClick}></div>
       </div>
       <img className="rotate" src={rotate} alt="" />
+      <img className="windowWidth" src={windowWidth} alt="" />
     </div>
   );
 }
