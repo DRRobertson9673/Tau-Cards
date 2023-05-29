@@ -11,6 +11,8 @@ You can add equipment to an operative by clicking the arrow at the bottom of the
 
 Click on the three dots at the bottom of the page to bring up a dashboard for keeping scores and referencing tactical ploys and other information. From here you can also progress the turning point reactivating all operatives.
 
+App cannot be used on small screens and the user will received a message to reduce screen width if it is above 16:9.
+
 ## Installation
 
 N/A
